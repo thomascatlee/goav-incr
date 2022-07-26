@@ -1,0 +1,12 @@
+prefix1=/d/ffmpeg-n4.4-latest-win64-gpl-shared-4.4
+exec_prefix1=${prefix1}/bin
+libdir1=${prefix1}/lib
+includedir1=${prefix1}/include
+
+Name: ffmpeg
+Version: n4.4
+Description: ffmpeg
+URL: http://ffmpeg/
+
+Libs: -L${libdir1} -lswresample
+Cflags: -I${includedir1}

@@ -169,6 +169,11 @@ func AvPacketAlloc() *Packet {
 	return (*Packet)(C.av_packet_alloc())
 }
 
+func AvPacketFree(pkt *Packet){
+	C.av_packet_free((**C.struct_AVPacket)(unsafe.Pointer(&pkt)))
+}
+
+
 //Pack a dictionary for use in side_data.
 func AvPacketPackDictionary(d *Dictionary, s *int) *uint8 {
 	return (*uint8)(C.av_packet_pack_dictionary((*C.struct_AVDictionary)(d), (*C.int)(unsafe.Pointer(s))))

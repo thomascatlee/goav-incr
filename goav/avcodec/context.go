@@ -8,7 +8,7 @@ package avcodec
 import "C"
 import (
 	"unsafe"
-	"github.com/ailumiyana/goav-incr/goav/avutil"
+	"github.com/thomascatlee/goav-incr/goav/avutil"
 )
 
 func (ctxt *Context) AvCodecGetPktTimebase() Rational {
